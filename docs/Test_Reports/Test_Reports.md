@@ -1,7 +1,6 @@
 # Test Plan Execution Report - SecureInsure-Testing Project
 
-**Date**: June 10, 2025  
-**Time**: 03:41 PM +07  
+**Date**: May 25, 2025  
 **Author**: Group Project (2 Members)  
 **Supervisor**: MSc. Võ Ngọc Tấn Phước  
 
@@ -150,4 +149,4 @@
 | TC_API_Secu_03          | Kiểm tra chống SQL Injection   | Admin tuchuc848@gmail.com, server chạy.            | 1. Gửi POST /AdminUpdate với mã SQL. 2. Kiểm tra.     | Email: tuchuc848@gmail.com, role: "' OR '1'='1"      | Response: "Cập nhật thành công", database không bị thay đổi bất thường.          | Response đúng, database cập nhật role như chuỗi (chưa rõ bảo mật).            | -   |
 
 ## Conclusion
-All 34 test cases have been executed as of June 10, 2025, 03:41 PM +07. Out of these, 28 passed, and 6 failed. The failed cases (TC_LOGIN_APP_01, TC_ROLE_APP_01, TC_ROLE_APP_02, TC_GETUSER_APP_01, TC_GETUSER_APP_02, TC_ADDUSER_APP_04 (Lần 1), TC_DELETEUSER_APP_01, TC_DELETEUSER_APP_02, TC_UPDATEUSER_APP_01, TC_UPDATEUSER_APP_02, TC_LOGOUT_APP_01, TC_LOGOUT_APP_02) require further debugging and fixes. TC_API_Secu_03 needs additional verification for SQL Injection security.
+All 34 test cases have been executed. Out of these, 28 passed, and 6 failed. The failed cases (TC_LOGIN_APP_01, TC_ROLE_APP_01, TC_ROLE_APP_02, TC_GETUSER_APP_01, TC_GETUSER_APP_02, TC_ADDUSER_APP_04 (Lần 1), TC_DELETEUSER_APP_01, TC_DELETEUSER_APP_02, TC_UPDATEUSER_APP_01, TC_UPDATEUSER_APP_02, TC_LOGOUT_APP_01, TC_LOGOUT_APP_02) require further debugging and fixes. TC_API_Secu_03 needs additional verification for SQL Injection security.
