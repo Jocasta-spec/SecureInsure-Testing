@@ -58,7 +58,7 @@
 | TC_Token_Stored_01        | Kiểm tra token trong thư mục tokens được mã hóa| P                 | 0      |
 | TC_API_Secu_01            | Kiểm tra yêu cầu CSRF token trên endpoint /add | P                 | 0      |
 | TC_API_Secu_02            | Kiểm tra POST request tới /add với CSRF token hợp lệ | P                 | 0      |
-| TC_API_Secu_03            | Kiểm tra chống SQL Injection trên /AdminUpdate | PP                 | 0      |
+| TC_API_Secu_03            | Kiểm tra chống SQL Injection trên /AdminUpdate | P                 | 0      |
 
 ## Conclusion
 All 34 test cases have been executed. Out of these, 28 passed, and 6 failed. The failed cases (TC_LOGIN_APP_01, TC_LOGIN_APP_03, TC_ROLE_APP_01, TC_ROLE_APP_02, TC_GETUSER_APP_01, TC_GETUSER_APP_02, TC_ADDUSER_APP_01, TC_ADDUSER_APP_02, TC_ADDUSER_APP_04 (Lần 1), TC_DELETEUSER_APP_01, TC_DELETEUSER_APP_02, TC_UPDATEUSER_APP_01, TC_UPDATEUSER_APP_02, TC_LOGOUT_APP_01, TC_LOGOUT_APP_02) require further debugging and fixes. TC_API_Secu_03 needs additional verification for SQL Injection security.
