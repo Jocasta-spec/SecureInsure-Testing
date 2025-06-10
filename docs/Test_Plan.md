@@ -17,11 +17,11 @@ This Test Plan outlines the approach for testing the SecureInsure system, focusi
 - **Environment**: Localhost (XAMPP, MySQL), Windows 11.
 
 ## 5. Test Cases
-- Total: 32 test cases (4 Web, 25 App, 3 API).
+- Total: 34 test cases (6 Web, 24 App, 4 API).
 - Criteria: Pass if actual result matches expected result.
 
 ## 6. Resources
-- Tester: Alexia Viet (Cẩm Tú).
+- Tester: Cẩm Tú.
 - Duration: 2 weeks, May 2025.
 
 ## 7. Risks
