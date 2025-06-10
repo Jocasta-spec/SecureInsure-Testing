@@ -28,5 +28,5 @@ This Test Plan outlines the approach for testing the SecureInsure system, focusi
 - Token refresh errors in App may cause test failures.
 
 ## 8. Deliverables
-- Test cases: [docs](docs/Test_Cases)
+- Test cases: [App_Testing.md](Test_Cases/App_Testing.md), [Web_Testing.md](Test_Cases/Web_Testing.md), [API_Testing.md](Test_Cases/API_Testing.md)
 - Screenshots: [OWASP ZAP](Screenshots/OWASP_Screenshots)
