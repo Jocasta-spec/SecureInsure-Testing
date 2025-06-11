@@ -4,7 +4,7 @@
 Kế hoạch Kiểm thử này phác thảo cách tiếp cận để kiểm thử hệ thống SecureInsure, tập trung vào chức năng và bảo mật API.
 
 ## 2. Mục tiêu
-- Đảm bảo chức năng Web và App (đăng nhập, quản lý người dùng).
+- Đảm bảo chức năng Web và App (đăng nhập, xem thông tin, quản lý người dùng, đăng xuất).
 - Xác minh bảo mật API chống lại CSRF và SQL Injection.
 
 ## 3. Phạm vi
@@ -24,9 +24,6 @@ Kế hoạch Kiểm thử này phác thảo cách tiếp cận để kiểm th�
 - Người kiểm thử: Cẩm Tú.
 - Thời gian: 2 tuần, tháng 5 năm 2025.
 
-## 7. Rủi ro
-- Lỗi làm mới token trong App có thể gây thất bại trong kiểm thử.
-
-## 8. Kết quả Giao hàng
+## 7. Kết quả kiểm thử
 - Trường hợp kiểm thử: [App_Testing.md](Test_Cases/App_Testing.md), [Web_Testing.md](Test_Cases/Web_Testing.md), [API_Testing.md](Test_Cases/API_Testing.md)
 - Ảnh chụp màn hình: [OWASP ZAP](Screenshots/OWASP_Screenshots), [Postman](Screenshots/Postman_Screenshots)
