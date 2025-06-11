@@ -1,7 +1,7 @@
 # Tài liệu Kiểm thử API
 
 ## Tổng quan
-Tài liệu này chứa các trường hợp kiểm thử cho API SecureInsure, tập trung vào các lỗ hổng bảo mật như CSRF, SQL Injection và XSS. Các kiểm thử được thực hiện bằng Postman và OWASP ZAP.
+Tài liệu này chứa các trường hợp kiểm thử cho API SecureInsure, tập trung vào các lỗ hổng bảo mật như CSRF, SQL Injection. Các kiểm thử được thực hiện bằng Postman và OWASP ZAP.
 
 ## Danh sách Trường hợp Kiểm thử
 
