@@ -1,32 +1,32 @@
-# Test Plan - SecureInsure
+# Kế hoạch Kiểm thử - SecureInsure
 
-## 1. Introduction
-This Test Plan outlines the approach for testing the SecureInsure system, focusing on functionality and API security.
+## 1. Giới thiệu
+Kế hoạch Kiểm thử này phác thảo cách tiếp cận để kiểm thử hệ thống SecureInsure, tập trung vào chức năng và bảo mật API.
 
-## 2. Objectives
-- Ensure Web and App functionality (login, user management).
-- Verify API security against CSRF and SQL Injection.
+## 2. Mục tiêu
+- Đảm bảo chức năng Web và App (đăng nhập, quản lý người dùng).
+- Xác minh bảo mật API chống lại CSRF và SQL Injection.
 
-## 3. Scope
-- **In Scope**: Functional testing (Web, App) and security testing (API).
-- **Out of Scope**: Performance testing, mobile responsiveness.
+## 3. Phạm vi
+- **Trong phạm vi**: Kiểm thử chức năng (Web, App) và kiểm thử bảo mật (API).
+- **Ngoài phạm vi**: Kiểm thử hiệu năng, khả năng phản hồi trên thiết bị di động.
 
-## 4. Test Approach
-- **Type**: Manual Testing.
-- **Tools**: Postman, OWASP ZAP.
-- **Environment**: Localhost (XAMPP, MySQL), Windows 11.
+## 4. Phương pháp Kiểm thử
+- **Loại**: Kiểm thử thủ công.
+- **Công cụ**: Postman, OWASP ZAP.
+- **Môi trường**: Localhost (XAMPP, MySQL), Windows 11.
 
-## 5. Test Cases
-- Total: 34 test cases (6 Web, 24 App, 4 API).
-- Criteria: Pass if actual result matches expected result.
+## 5. Trường hợp Kiểm thử
+- Tổng cộng: 34 trường hợp kiểm thử (6 Web, 24 App, 4 API).
+- Tiêu chí: Đạt nếu kết quả thực tế khớp với kết quả mong đợi.
 
-## 6. Resources
-- Tester: Cẩm Tú.
-- Duration: 2 weeks, May 2025.
+## 6. Nguồn lực
+- Người kiểm thử: Cẩm Tú.
+- Thời gian: 2 tuần, tháng 5 năm 2025.
 
-## 7. Risks
-- Token refresh errors in App may cause test failures.
+## 7. Rủi ro
+- Lỗi làm mới token trong App có thể gây thất bại trong kiểm thử.
 
-## 8. Deliverables
-- Test cases: [App_Testing.md](Test_Cases/App_Testing.md), [Web_Testing.md](Test_Cases/Web_Testing.md), [API_Testing.md](Test_Cases/API_Testing.md)
-- Screenshots: [OWASP ZAP](Screenshots/OWASP_Screenshots)
+## 8. Kết quả Giao hàng
+- Trường hợp kiểm thử: [App_Testing.md](Test_Cases/App_Testing.md), [Web_Testing.md](Test_Cases/Web_Testing.md), [API_Testing.md](Test_Cases/API_Testing.md)
+- Ảnh chụp màn hình: [OWASP ZAP](Screenshots/OWASP_Screenshots), [Postman](Screenshots/Postman_Screenshots)
