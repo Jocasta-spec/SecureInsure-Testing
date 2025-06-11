@@ -19,7 +19,7 @@
 
 ### 5.1. Yêu cầu tài nguyên kiểm thử
 - **Phần cứng**: Máy tính có internet.
-- **Phần mềm**: XAMPP, Chrome, Postman, Java JDK, Maven.
+- **Phần mềm**: XAMPP, Chrome, Postman, Java JDK, Maven, OWASP ZAP.
 
 ### 5.2. Danh sách các tình huống kiểm thử
 
