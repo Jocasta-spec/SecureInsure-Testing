@@ -63,7 +63,8 @@
 ### 5.3. Kiểm thử bằng OWASP ZAP
 **Các lỗi phát hiện**: 
 
-**1. Lộ thông tin file .env**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/env_file_data_exposed.png)
+**1. Lộ thông tin file .env**: [Kiểm tra scan](docs/Screenshots/OWASP_Screenshots
+/env_file_data_exposed.png)
 - **Mức độ rủi ro**: Cao
 - **Giải thích**: File `.env` chứa thông tin nhạy cảm như `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, thông tin kết nối database (`DBHOST`, `DBUSER`, `DBPASS`, `DBNAME`), và `ENCRYPTION_KEY`
 - **Hậu quả**: 
