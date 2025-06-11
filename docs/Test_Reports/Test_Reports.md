@@ -59,7 +59,7 @@
 | TC_API_Secu_01            | Kiểm tra yêu cầu CSRF token trên endpoint /add | P                 | 0      |
 | TC_API_Secu_02            | Kiểm tra POST request tới /add với CSRF token hợp lệ | P                 | 0      |
 | TC_API_Secu_03            | Kiểm tra chống SQL Injection trên /AdminUpdate | P                 | 0      |
-
+| TC_API_SECURITY_ZAP_01            | Kiểm tra bảo mật endpoint API (/API_Secu) bằng OWASP ZAP qua proxy Postman | P                 | 4      |
 ### 5.3. Kiểm thử bằng OWASP ZAP
 **Các lỗi phát hiện**: 
 
