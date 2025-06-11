@@ -1,7 +1,7 @@
 # Tài liệu Kiểm thử Web
 
 ## Tổng quan
-Tài liệu này chứa các trường hợp kiểm thử cho ứng dụng web SecureInsure-Testing, là một phần của dự án nhóm hai người dưới chủ đề "Nghiên cứu về Bảo mật API và Ứng dụng của nó trong Xây dựng Ứng dụng Chéo Nền tảng (Thạc sĩ Võ Ngọc Tấn Phước)".
+Tài liệu này chứa các trường hợp kiểm thử cho ứng dụng web SecureInsure-Testing, là một phần của dự án nhóm hai người dưới chủ đề "Nghiên cứu về Bảo mật API và Ứng dụng của nó trong Xây dựng Ứng dụng Đa Nền tảng (Thạc sĩ Võ Ngọc Tấn Phước)".
 
 ## 5.2. Danh sách các tình huống kiểm thử
 | STT | Mã testcase           | Tên testcase                              | Mô tả                                                                 |
