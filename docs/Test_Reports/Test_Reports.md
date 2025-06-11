@@ -62,6 +62,7 @@
 
 ### 5.3. Kiểm thử bằng OWASP ZAP
 **Các lỗi phát hiện**: 
+
 **1. Lộ thông tin file .env**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/env_file_data_exposed.png)
 - **Mức độ rủi ro**: Cao
 - **Giải thích**: File `.env` chứa thông tin nhạy cảm như `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, thông tin kết nối database (`DBHOST`, `DBUSER`, `DBPASS`, `DBNAME`), và `ENCRYPTION_KEY`
@@ -70,15 +71,18 @@
     - Thông tin database cho phép hacker kết nối trực tiếp, thực hiện SQL Injection, và thao túng dữ liệu.
     - Khóa mã hóa `HashKeyPass` bị lộ có thể dẫn đến giải mã token hoặc tạo token giả mạo, vi phạm bảo mật API.
     - Nguy cơ tấn công chuỗi cung ứng, ảnh hưởng đến server XAMPP và dịch vụ liên kết.
+
  **2. Tấn công SQL Injection**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/SQL_Injection_endpoint_add.png)
   - **Mức độ rủi ro**: Cao
   - **Giải thích**: Phát hiện lỗ hổng SQL Injection trên endpoint `http://localhost/API_Secu/add`.  
   - **Chi tiết**:
     - Test với payload `OR '1'='1'` không thành công, cho thấy một mức độ bảo vệ cơ bản.
     - Tuy nhiên, payload `139b88ec1c41cb5964e5d84f91121bf01ccc326f3df5bc3eb5b378f33dde08f6 AND 1=1 --` (một dạng SQL Injection phức tạp) đã vượt qua kiểm tra, có khả năng thực thi truy vấn trái phép.
+
  **3. Application Error Disclosure**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/Application_Error_Disclosure_endpoint_update.png)
   - **Mức độ rủi ro**: Trung bình.
   - **Liên quan đến API**: Nếu API trả về lỗi chi tiết (VD: stack trace, mã lỗi nội bộ) khi xử lý request (như /AdminUpdate), hacker có thể khai thác để tìm lỗ hổng logic hoặc SQL Injection.
+
  **4. Directory Browsing**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/Exposing_API_structure.png)
   - **Mức độ rủi ro**: Trung bình
   - **Mô tả**: <title>Index of /API_Secu</title> – Điều này cho thấy khi truy cập /API_Secu/, server trả về danh sách các file/thư mục (VD: config/, vendor/) thay vì một trang hoặc API response.
