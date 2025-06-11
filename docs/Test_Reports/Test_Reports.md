@@ -1,24 +1,24 @@
-# Test Plan Execution Report - SecureInsure-Testing Project
+# Báo cáo Thực hiện Kế hoạch Kiểm thử - Dự án SecureInsure-Testing
 
-**Date**: May 26, 2025   
-**Author**: Group Project (2 Members)  
-**Supervisor**: MSc. Võ Ngọc Tấn Phước  
+**Ngày**: 26 tháng 5 năm 2025  
+**Tác giả**: Nhóm Dự án (2 Thành viên)  
+**Người giám sát**: Thạc sĩ Võ Ngọc Tấn Phước  
 
-## Summary
+## Tóm tắt
 
-| Metric          | Value |
-|-----------------|-------|
-| Test Plans      | 1     |
-| Test Cases      | 34    |
-| Pass            | 28    |
-| Fail            | 6     |
+| Chỉ số          | Giá trị |
+|-----------------|---------|
+| Kế hoạch kiểm thử | 1       |
+| Trường hợp kiểm thử | 34    |
+| Đạt             | 28     |
+| Thất bại        | 6      |
 
-**Test Case execution progress**: 100% completed
+**Tiến độ thực hiện trường hợp kiểm thử**: 100% hoàn thành
 
-## Test Case Details
+## Chi tiết Trường hợp Kiểm thử
 
 ### 5.1. Yêu cầu tài nguyên kiểm thử
-- **Phần cứng**: PC có internet.
+- **Phần cứng**: Máy tính có internet.
 - **Phần mềm**: XAMPP, Chrome, Postman, Java JDK, Maven.
 
 ### 5.2. Danh sách các tình huống kiểm thử
@@ -72,24 +72,24 @@
     - Khóa mã hóa `HashKeyPass` bị lộ có thể dẫn đến giải mã token hoặc tạo token giả mạo, vi phạm bảo mật API.
     - Nguy cơ tấn công chuỗi cung ứng, ảnh hưởng đến server XAMPP và dịch vụ liên kết.
 
- **2. Tấn công SQL Injection**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/SQL_Injection_endpoint_add.png)
-  - **Mức độ rủi ro**: Cao
-  - **Giải thích**: Phát hiện lỗ hổng SQL Injection trên endpoint `http://localhost/API_Secu/add`.  
-  - **Chi tiết**:
+**2. Tấn công SQL Injection**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/SQL_Injection_endpoint_add.png)
+- **Mức độ rủi ro**: Cao
+- **Giải thích**: Phát hiện lỗ hổng SQL Injection trên endpoint `http://localhost/API_Secu/add`.  
+- **Chi tiết**:
     - Test với payload `OR '1'='1'` không thành công, cho thấy một mức độ bảo vệ cơ bản.
     - Tuy nhiên, payload `139b88ec1c41cb5964e5d84f91121bf01ccc326f3df5bc3eb5b378f33dde08f6 AND 1=1 --` (một dạng SQL Injection phức tạp) đã vượt qua kiểm tra, có khả năng thực thi truy vấn trái phép.
 
- **3. Application Error Disclosure**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/Application_Error_Disclosure_endpoint_update.png)
-  - **Mức độ rủi ro**: Trung bình.
-  - **Liên quan đến API**: Nếu API trả về lỗi chi tiết (VD: stack trace, mã lỗi nội bộ) khi xử lý request (như /AdminUpdate), hacker có thể khai thác để tìm lỗ hổng logic hoặc SQL Injection.
+**3. Application Error Disclosure**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/Application_Error_Disclosure_endpoint_update.png)
+- **Mức độ rủi ro**: Trung bình
+- **Liên quan đến API**: Nếu API trả về lỗi chi tiết (VD: stack trace, mã lỗi nội bộ) khi xử lý request (như /AdminUpdate), hacker có thể khai thác để tìm lỗ hổng logic hoặc SQL Injection.
 
- **4. Directory Browsing**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/Exposing_API_structure.png)
-  - **Mức độ rủi ro**: Trung bình
-  - **Mô tả**: <title>Index of /API_Secu</title> – Điều này cho thấy khi truy cập /API_Secu/, server trả về danh sách các file/thư mục (VD: config/, vendor/) thay vì một trang hoặc API response.
-  - **Ảnh hưởng**: Server (Apache 2) cho phép duyệt thư mục, có thể lộ file nhạy cảm (VD: config database, source code). Hacker có thể:
+**4. Directory Browsing**: [Kiểm tra scan](Screenshots/OWASP_Screenshots/Exposing_API_structure.png)
+- **Mức độ rủi ro**: Trung bình
+- **Mô tả**: `<title>Index of /API_Secu</title>` – Điều này cho thấy khi truy cập /API_Secu/, server trả về danh sách các file/thư mục (VD: config/, vendor/) thay vì một trang hoặc API response.
+- **Ảnh hưởng**: Server (Apache 2) cho phép duyệt thư mục, có thể lộ file nhạy cảm (VD: config database, source code). Hacker có thể:
     - Xem danh sách file (VD: config.php chứa thông tin database).
     - Tải file nhạy cảm, từ đó tấn công database hoặc endpoint API (VD: /AdminUpdate).
-  - **Nguy cơ**: Lộ cấu trúc API, file config (username/password database), hoặc mã nguồn, làm tăng nguy cơ tấn công SQL Injection hoặc lấy token.
+- **Nguy cơ**: Lộ cấu trúc API, file config (username/password database), hoặc mã nguồn, làm tăng nguy cơ tấn công SQL Injection hoặc lấy token.
 
-## Conclusion
-All 34 test cases have been executed. Out of these, 28 passed, and 6 failed. The failed cases (TC_LOGIN_APP_01, TC_LOGIN_APP_03, TC_ROLE_APP_01, TC_ROLE_APP_02, TC_GETUSER_APP_01, TC_GETUSER_APP_02, TC_ADDUSER_APP_01, TC_ADDUSER_APP_02, TC_ADDUSER_APP_04 (Lần 1), TC_DELETEUSER_APP_01, TC_DELETEUSER_APP_02, TC_UPDATEUSER_APP_01, TC_UPDATEUSER_APP_02, TC_LOGOUT_APP_01, TC_LOGOUT_APP_02) require further debugging and fixes. TC_API_Secu_03 needs additional verification for SQL Injection security. Need to fix security bugs found from OWASP ZAP. 
+## Kết luận
+Tất cả 34 trường hợp kiểm thử đã được thực hiện. Trong đó, 28 trường hợp đạt, 6 trường hợp thất bại. Các trường hợp thất bại (TC_LOGIN_APP_01, TC_LOGIN_APP_03, TC_ROLE_APP_01, TC_ROLE_APP_02, TC_GETUSER_APP_01, TC_GETUSER_APP_02, TC_ADDUSER_APP_01, TC_ADDUSER_APP_02, TC_ADDUSER_APP_04 (Lần 1), TC_DELETEUSER_APP_01, TC_DELETEUSER_APP_02, TC_UPDATEUSER_APP_01, TC_UPDATEUSER_APP_02, TC_LOGOUT_APP_01, TC_LOGOUT_APP_02) cần được gỡ lỗi và sửa chữa thêm. TC_API_Secu_03 cần kiểm tra bổ sung về bảo mật SQL Injection. Cần khắc phục các lỗi bảo mật được tìm thấy từ OWASP ZAP.
