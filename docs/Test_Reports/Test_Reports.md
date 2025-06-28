@@ -11,7 +11,7 @@
 | Kế hoạch kiểm thử | 1       |
 | Trường hợp kiểm thử | 34    |
 | Đạt             | 28     |
-| Thất bại        | 6      |
+| Thất bại        | 15      |
 
 **Tiến độ thực hiện trường hợp kiểm thử**: 100% hoàn thành
 
