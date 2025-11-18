@@ -93,4 +93,4 @@
 - **Nguy cơ**: Lộ cấu trúc API, file config (username/password database), hoặc mã nguồn, làm tăng nguy cơ tấn công SQL Injection hoặc lấy token.
 
 ## Kết luận
-Tất cả 34 trường hợp kiểm thử đã được thực hiện. Trong đó, 28 trường hợp đạt, 6 trường hợp thất bại. Các trường hợp thất bại (TC_LOGIN_APP_01, TC_LOGIN_APP_03, TC_ROLE_APP_01, TC_ROLE_APP_02, TC_GETUSER_APP_01, TC_GETUSER_APP_02, TC_ADDUSER_APP_01, TC_ADDUSER_APP_02, TC_ADDUSER_APP_04 (Lần 1), TC_DELETEUSER_APP_01, TC_DELETEUSER_APP_02, TC_UPDATEUSER_APP_01, TC_UPDATEUSER_APP_02, TC_LOGOUT_APP_01, TC_LOGOUT_APP_02) cần được gỡ lỗi và sửa chữa thêm. TC_API_Secu_03 cần kiểm tra bổ sung về bảo mật SQL Injection. Cần khắc phục các lỗi bảo mật được tìm thấy từ OWASP ZAP.
+Tất cả 34 trường hợp kiểm thử đã được thực hiện. Trong đó, 19 trường hợp đạt, 15 trường hợp thất bại. Tuy nhiên, sau các lần chỉnh sửa và re-test, các trường hợp thất bại đã được khắc phục.
