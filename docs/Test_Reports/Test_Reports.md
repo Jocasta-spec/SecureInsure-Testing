@@ -12,6 +12,7 @@
 | Trường hợp kiểm thử | 34    |
 | Đạt             | 19     |
 | Thất bại        | 15      |
+| Đã khắc phục        | 15      |
 
 **Tiến độ thực hiện trường hợp kiểm thử**: 100% hoàn thành
 
